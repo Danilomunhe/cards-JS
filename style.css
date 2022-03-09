@@ -13,16 +13,15 @@ body{
 
 header{
     height: 100px;
-    background-color: black;
+    background: linear-gradient(to bottom, #001aff 50%, #000000 100%);
 }
-
 main{
     flex-grow: 1;
     display: flex;
 }
 footer{
     height: 50px;
-    background-color: black;
+    background: linear-gradient(to bottom, #001aff 50%, #000000 100%);
 }
 .card-container{
     padding: 8px;

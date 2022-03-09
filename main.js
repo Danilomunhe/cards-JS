@@ -48,12 +48,14 @@ const db = [
     }
 ]
 
+//Função responsável por exibir a quantidade de estrelas de um produto
 const definirAvaliacao  = (valor) =>{
     const estrelaCheia = valor
     const estrelaVazia = 5 - valor
     return "&starf;".repeat(estrelaCheia) + "&star;".repeat(estrelaVazia);
 }
 
+//Função responsável pela criação dos cards
 const criarCard = (produto) =>{
     const card = document.createElement('div')
     card.classList.add('card')
@@ -75,11 +77,13 @@ const criarCard = (produto) =>{
     return card
 }
 
+//Função responsável pelo carregamento de produtos
 const carregarProdutos = (produtos) =>{
     const container = document.querySelector('.card-container')
     const cards = produtos.map(criarCard)
 
     container.replaceChildren(...cards)
+
 }
 
 carregarProdutos(db)
